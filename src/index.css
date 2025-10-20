@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* Vietnamese Communist Party Historical Theme Styles */
+@layer base {
+  html, body, #root {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #fefdf8;
+    color: #43302b;
+  }
+}
+
+/* Enhanced Hover Animations */
+@keyframes floatSlow { 0% { transform: translateY(0px) } 50% { transform: translateY(-8px) } 100% { transform: translateY(0px) } }
+@keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 20px rgba(220, 38, 38, 0.3) } 50% { box-shadow: 0 0 40px rgba(220, 38, 38, 0.6) } }
+@keyframes bounceIn { 0% { transform: scale(0.3) } 50% { transform: scale(1.05) } 70% { transform: scale(0.9) } 100% { transform: scale(1) } }
+
+@layer components {
+  /* Historical Button Styles */
+  .btn-vietnam {
+    background-color: #ef4444; /* vietnam-red-500 */
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    border-radius: 0.5rem; /* rounded-lg */
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-duration: 200ms;
+    box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.1), 0 2px 4px -1px rgba(239, 68, 68, 0.06);
+  }
+  .btn-vietnam:hover { background-color: #dc2626; }
+  
+  .btn-gold {
+    background-color: #f59e0b; color: #ffffff; font-weight: 600; padding: 0.5rem 1rem; border-radius: 0.5rem;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-duration: 200ms;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+  }
+  .btn-gold:hover { background-color: #d97706; }
+  
+  .btn-historical { background-color: #a18072; color: #fefdf8; font-weight: 600; padding: 0.5rem 1rem; border-radius: 0.5rem; transition: all 200ms; box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05); }
+  .btn-historical:hover { background-color: #977669; }
+  
+  /* Card Styles */
+  .card-vietnam { background-color: #ffffff; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05); border: 1px solid #fee2e2; padding: 1.5rem; }
+  .card-historical { background-color: #fefdf8; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05); border: 1px solid #eaddd7; padding: 1.5rem; }
+  
+  /* Header Styles */
+  .header-vietnam { background-image: linear-gradient(to right, #ef4444, #dc2626); color: #ffffff; padding: 1rem 1.5rem; box-shadow: 0 4px 6px -1px rgba(239,68,68,.1),0 2px 4px -1px rgba(239,68,68,.06); }
+  .header-gold { background-image: linear-gradient(to right, #f59e0b, #d97706); color: #ffffff; padding: 1rem 1.5rem; box-shadow: 0 0 20px rgba(245,158,11,.3); }
+  
+  /* Text Styles */
+  .text-historical { color: #43302b; font-family: Times New Roman, serif; }
+  .text-vietnam { color: #dc2626; font-weight: 600; }
+  
+  /* Background Patterns */
+  .bg-vietnam-pattern { background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ef4444" fill-opacity="0.1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); }
+  .bg-hammer-sickle { background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M20 80 L30 70 L40 80 L35 85 L25 75 Z" fill="%23f59e0b" opacity="0.1"/%3E%3Cpath d="M60 20 A20 20 0 0 1 80 40 L75 35 A15 15 0 0 0 60 25 Z" fill="%23f59e0b" opacity="0.1"/%3E%3C/svg%3E'); }
+
+  /* Animated BG layers */
+  .bg-layer { position: absolute; inset: 0; pointer-events: none; }
+  .animate-glow { animation: pulseGlow 2s ease-in-out infinite }
+  .animate-pulse-slow { animation: pulseGlow 3s ease-in-out infinite }
+  .animate-bounce-in { animation: bounceIn 0.6s ease-out }
+
+  /* TOC card style */
+  .toc-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1rem; transition: transform .2s ease, box-shadow .2s ease; }
+  .toc-card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05); }
+}
+
+@layer utilities {
+  .text-shadow-vietnam { text-shadow: 1px 1px 2px rgba(239, 68, 68, 0.3); }
+  .text-shadow-gold { text-shadow: 1px 1px 2px rgba(245, 158, 11, 0.3); }
+  .border-vietnam { border-color: #ef4444; }
+  .border-gold { border-color: #f59e0b; }
+}
