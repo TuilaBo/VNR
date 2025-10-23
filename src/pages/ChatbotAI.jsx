@@ -139,7 +139,7 @@ export default function ChatbotAI() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                  className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-vietnam-red-200 overflow-hidden"
+                className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-vietnam-red-200 overflow-hidden flex flex-col h-[600px]"
               >
                 <div 
                   className="px-6 py-4 border-b border-vietnam-red-100"
@@ -153,22 +153,22 @@ export default function ChatbotAI() {
                   </div>
                 </div>
                 
-                  <div ref={chatContainerRef} className="h-96 p-6 overflow-y-auto bg-vintage-cream-50 scroll-smooth">
-                  <div className="space-y-4">
+                    <div ref={chatContainerRef} className="flex-1 p-6 overflow-y-auto bg-vintage-cream-50 scroll-smooth">
+                  <div className="space-y-3">
                     {messages.map((message) => (
                       <div key={message.id} className={`flex items-start gap-3 ${message.type === 'user' ? 'justify-end' : ''}`}>
                         {message.type === 'bot' && (
                           <div 
-                            className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                            className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0"
                             style={{
                               background: 'linear-gradient(135deg, #ef4444, #dc2626)'
                             }}
                           >
-                            <Bot className="w-4 h-4 text-white"/>
+                            <Bot className="w-3.5 h-3.5 text-white"/>
                           </div>
                         )}
                         
-                        <div className={`rounded-lg p-4 shadow-sm max-w-xs ${
+                        <div className={`rounded-lg p-3 shadow-sm max-w-xs ${
                           message.type === 'user' 
                             ? 'bg-white text-black border border-vietnam-red-200' 
                             : 'bg-white border border-gray-200'
@@ -176,7 +176,7 @@ export default function ChatbotAI() {
                           <p className={`text-sm ${message.type === 'user' ? 'font-semibold' : 'text-gray-700'}`}>
                             {message.content}
                           </p>
-                          <p className="text-xs text-gray-500 mt-2">
+                          <p className="text-xs text-gray-500 mt-1">
                             {message.timestamp.toLocaleTimeString('vi-VN', { 
                               hour: '2-digit', 
                               minute: '2-digit' 
@@ -186,12 +186,12 @@ export default function ChatbotAI() {
 
                         {message.type === 'user' && (
                           <div 
-                            className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                            className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0"
                             style={{
                               background: 'linear-gradient(135deg, #ef4444, #dc2626)'
                             }}
                           >
-                            <MessageCircle className="w-4 h-4 text-white"/>
+                            <MessageCircle className="w-3.5 h-3.5 text-white"/>
                           </div>
                         )}
                       </div>
@@ -200,17 +200,17 @@ export default function ChatbotAI() {
                     {isLoading && (
                       <div className="flex items-start gap-3">
                         <div 
-                          className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                          className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0"
                           style={{
                             background: 'linear-gradient(135deg, #ef4444, #dc2626)'
                           }}
                         >
-                          <Bot className="w-4 h-4 text-white"/>
+                          <Bot className="w-3.5 h-3.5 text-white"/>
                         </div>
-                        <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 max-w-xs">
+                        <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-200 max-w-xs">
                           <div className="flex items-center gap-2">
-                            <Loader2 className="w-4 h-4 animate-spin text-vietnam-red-500"/>
-                            <p className="text-gray-500 text-sm">AI đang suy nghĩ...</p>
+                            <Loader2 className="w-3 h-3 animate-spin text-vietnam-red-500"/>
+                            <p className="text-gray-500 text-xs">AI đang suy nghĩ...</p>
                           </div>
                         </div>
                       </div>
@@ -220,7 +220,7 @@ export default function ChatbotAI() {
                   </div>
                 </div>
                 
-                  <div className="p-4 border-t border-vietnam-red-100 bg-white/90 backdrop-blur-sm">
+                  <div className="p-4 border-t border-vietnam-red-100 bg-white/90 backdrop-blur-sm flex-shrink-0">
                   <form 
                     onSubmit={(e) => {
                       e.preventDefault()
@@ -235,12 +235,12 @@ export default function ChatbotAI() {
                       onKeyPress={handleKeyPress}
                       placeholder="Nhập câu hỏi của bạn..."
                       disabled={isLoading}
-                      className="flex-1 px-4 py-2 border border-vietnam-red-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-vietnam-red-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="flex-1 px-4 py-3 border border-vietnam-red-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-vietnam-red-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
                     />
                     <button 
                       type="submit"
                       disabled={!inputMessage.trim() || isLoading}
-                      className="px-6 py-2 rounded-lg text-white font-medium transition-all duration-200 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                      className="px-6 py-3 rounded-lg text-white font-medium transition-all duration-200 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                       style={{
                         background: 'linear-gradient(135deg, #ef4444, #dc2626)'
                       }}
