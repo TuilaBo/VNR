@@ -8,12 +8,18 @@ export default function Footer() {
     <footer className="relative w-full overflow-hidden text-[#3e2f1b]">
       
       {/* Background Image */}
-      <div 
+      {/* <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{ backgroundImage: `url(${bg4})` }}
-      ></div>   
+      ></div>    */}
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-historical-brown-900/95 to-historical-brown-800/95"></div>
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-historical-brown-900/95 to-historical-brown-800/95"></div> */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ backgroundImage: `url(${bg4})` }}
+      ></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#fffaf0]/90 via-[#f8f3eb]/95 to-[#f6ead5]/90"></div>
+      <div className="absolute inset-0 backdrop-blur-[1px]"></div>
       {/* ✳️ Nội dung chính */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-10">

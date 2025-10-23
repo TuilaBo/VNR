@@ -151,7 +151,8 @@ export default function Home() {
     { date: '20/11/1953', label: 'Pháp nhảy dù chiếm Điện Biên Phủ' },
     { date: '06/12/1953', label: 'Bộ Chính trị quyết mở chiến dịch' },
     { date: '13/03/1954', label: 'Đợt 1: Mở cửa - tiêu diệt Him Lam' },
-    { date: '30/03/1954', label: 'Đợt 3: Công kích then chốt (phía Đông)' },
+    { date: '30/03/1954', label: 'Đợt 2: Công kích then chốt (phía Đông)' },
+    { date: '01/05/1954', label: 'Đợt 3: Tổng công kích' },
     { date: '06/05/1954', label: 'Đêm bộc phá A1' },
     { date: '07/05/1954', label: 'Toàn thắng - chiếm sở chỉ huy' },
     { date: '21/07/1954', label: 'Hiệp định Geneva' }
@@ -259,31 +260,31 @@ export default function Home() {
                     Xem chi tiết
                   </a>
 
-                  <button
+                  {/* <button
                     onClick={() => toggleSubsection(s.id)}
                     className="text-sm text-[#7a1b1b] bg-[#fff5e8] px-3 py-2 rounded-md border border-[#f1d9d9]"
                   >
                     {expandedSubsections[s.id] ? 'Thu gọn' : 'Mở rộng'}
-                  </button>
+                  </button> */}
                 </div>
 
                 {/* optional expanded content (short) */}
-                <motion.div
+                {/* <motion.div
                   initial={false}
                   animate={{ height: expandedSubsections[s.id] ? 'auto' : 0, opacity: expandedSubsections[s.id] ? 1 : 0 }}
                   transition={{ duration: 0.35 }}
                   className="overflow-hidden mt-4"
                 >
                   <div className="p-4 bg-[#fffaf7] border border-[#f3dcd8] rounded-md text-[#4a3428]">
-                    {/* You can place a slightly longer excerpt here pulled from the DOCX */}
+                
                     {expandedSubsections[s.id] && (
                       <p>
-                        {/* fallback detailed text (can be replaced by full docs content) */}
+                      
                         {s.summary} — Nội dung chi tiết hơn sẽ xuất hiện ở đây. (Phiên bản rút gọn trên trang chủ; nút "Xem chi tiết" có thể mở trang con hoặc popup để xem toàn văn.)
                       </p>
                     )}
                   </div>
-                </motion.div>
+                </motion.div> */}
               </div>
             </motion.section>
           )
