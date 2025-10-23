@@ -1,13 +1,20 @@
-import { useState, useEffect } from 'react'
-import { Bot, MessageCircle, Lightbulb, BookOpen, Clock, ArrowUp } from 'lucide-react'
+import { useState, useEffect, useRef } from 'react'
+import { Bot, MessageCircle, Lightbulb, BookOpen, Clock, ArrowUp, Send, Loader2 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { sendMessageToChatbase, getInitialGreeting } from '../services/chatbaseApi'
 import bg1 from '../assets/bg1.jpg'
 import bg2 from '../assets/bg2.jpg'
 
 export default function ChatbotAI() {
   const [showTop, setShowTop] = useState(false)
+  const [messages, setMessages] = useState([])
+  const [inputMessage, setInputMessage] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+  const [conversationId, setConversationId] = useState(null)
+  const messagesEndRef = useRef(null)
+  const chatContainerRef = useRef(null)
 
   // Sample sections for navbar
   const sections = [
@@ -15,6 +22,24 @@ export default function ChatbotAI() {
     { id: 'chatbot-ai', title: 'ChatbotAI', icon: Bot },
     { id: 'cau-hoi-on-tap', title: 'Câu Hỏi Ôn Tập', icon: MessageCircle }
   ]
+
+  // Initialize chat with greeting
+  useEffect(() => {
+    const greeting = getInitialGreeting()
+    setMessages([{
+      id: 1,
+      type: 'bot',
+      content: greeting.message,
+      timestamp: new Date()
+    }])
+  }, [])
+
+  // Auto scroll to bottom when new messages arrive (only within chat container)
+  useEffect(() => {
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight
+    }
+  }, [messages])
 
   // Scroll to top functionality
   useEffect(() => {
@@ -24,6 +49,58 @@ export default function ChatbotAI() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Send message function
+  const handleSendMessage = async () => {
+    if (!inputMessage.trim() || isLoading) return
+
+    const userMessage = {
+      id: Date.now(),
+      type: 'user',
+      content: inputMessage.trim(),
+      timestamp: new Date()
+    }
+
+    setMessages(prev => [...prev, userMessage])
+    setInputMessage('')
+    setIsLoading(true)
+
+    try {
+      const response = await sendMessageToChatbase(inputMessage.trim(), conversationId)
+      
+      const botMessage = {
+        id: Date.now() + 1,
+        type: 'bot',
+        content: response.message,
+        timestamp: new Date()
+      }
+
+      setMessages(prev => [...prev, botMessage])
+      
+      if (response.conversationId) {
+        setConversationId(response.conversationId)
+      }
+    } catch (error) {
+      console.error('Error sending message:', error)
+      const errorMessage = {
+        id: Date.now() + 1,
+        type: 'bot',
+        content: 'Xin lỗi, có lỗi xảy ra khi kết nối với AI. Vui lòng thử lại sau.',
+        timestamp: new Date()
+      }
+      setMessages(prev => [...prev, errorMessage])
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  // Handle Enter key press
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleSendMessage()
+    }
+  }
 
   return (
     <div className="min-h-screen bg-vintage-cream-50 w-full relative overflow-hidden">
@@ -76,82 +153,119 @@ export default function ChatbotAI() {
                   </div>
                 </div>
                 
-                  <div className="h-96 p-6 overflow-y-auto bg-vintage-cream-50">
+                  <div ref={chatContainerRef} className="h-96 p-6 overflow-y-auto bg-vintage-cream-50 scroll-smooth">
                   <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div 
-                        className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
-                        style={{
-                          background: 'linear-gradient(135deg, #ef4444, #dc2626)'
-                        }}
-                      >
-                        <Bot className="w-4 h-4 text-white"/>
+                    {messages.map((message) => (
+                      <div key={message.id} className={`flex items-start gap-3 ${message.type === 'user' ? 'justify-end' : ''}`}>
+                        {message.type === 'bot' && (
+                          <div 
+                            className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                            style={{
+                              background: 'linear-gradient(135deg, #ef4444, #dc2626)'
+                            }}
+                          >
+                            <Bot className="w-4 h-4 text-white"/>
+                          </div>
+                        )}
+                        
+                        <div className={`rounded-lg p-4 shadow-sm max-w-xs ${
+                          message.type === 'user' 
+                            ? 'bg-white text-black border border-vietnam-red-200' 
+                            : 'bg-white border border-gray-200'
+                        }`}>
+                          <p className={`text-sm ${message.type === 'user' ? 'font-semibold' : 'text-gray-700'}`}>
+                            {message.content}
+                          </p>
+                          <p className="text-xs text-gray-500 mt-2">
+                            {message.timestamp.toLocaleTimeString('vi-VN', { 
+                              hour: '2-digit', 
+                              minute: '2-digit' 
+                            })}
+                          </p>
+                        </div>
+
+                        {message.type === 'user' && (
+                          <div 
+                            className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                            style={{
+                              background: 'linear-gradient(135deg, #ef4444, #dc2626)'
+                            }}
+                          >
+                            <MessageCircle className="w-4 h-4 text-white"/>
+                          </div>
+                        )}
                       </div>
-                      <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 max-w-xs">
-                        <p className="text-gray-700 text-sm">
-                          Xin chào! Tôi là AI Assistant chuyên về lịch sử chiến dịch Điện Biên Phủ. 
-                          Bạn có thể hỏi tôi bất kỳ câu hỏi nào về chiến dịch này.
-                        </p>
-                      </div>
-                    </div>
+                    ))}
                     
-                    <div className="flex items-start gap-3 justify-end">
-                        <div className="bg-white text-black rounded-lg p-4 shadow-sm max-w-xs border border-vietnam-red-200">
-                        <p className="text-base font-semibold">
-                          Chiến dịch Điện Biên Phủ diễn ra trong bao lâu?
-                        </p>
+                    {isLoading && (
+                      <div className="flex items-start gap-3">
+                        <div 
+                          className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                          style={{
+                            background: 'linear-gradient(135deg, #ef4444, #dc2626)'
+                          }}
+                        >
+                          <Bot className="w-4 h-4 text-white"/>
+                        </div>
+                        <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 max-w-xs">
+                          <div className="flex items-center gap-2">
+                            <Loader2 className="w-4 h-4 animate-spin text-vietnam-red-500"/>
+                            <p className="text-gray-500 text-sm">AI đang suy nghĩ...</p>
+                          </div>
+                        </div>
                       </div>
-                      <div 
-                        className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
-                        style={{
-                          background: 'linear-gradient(135deg, #ef4444, #dc2626)'
-                        }}
-                      >
-                        <MessageCircle className="w-4 h-4 text-white"/>
-                      </div>
-                    </div>
+                    )}
                     
-                    <div className="flex items-start gap-3">
-                      <div 
-                        className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
-                        style={{
-                          background: 'linear-gradient(135deg, #ef4444, #dc2626)'
-                        }}
-                      >
-                        <Bot className="w-4 h-4 text-white"/>
-                      </div>
-                      <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 max-w-xs">
-                        <p className="text-gray-700 text-sm">
-                          Chiến dịch Điện Biên Phủ diễn ra trong 56 ngày đêm, từ ngày 13/3/1954 đến 7/5/1954. 
-                          Đây là một trong những chiến dịch dài nhất và ác liệt nhất trong lịch sử quân sự Việt Nam.
-                        </p>
-                      </div>
-                    </div>
+                    <div ref={messagesEndRef} />
                   </div>
                 </div>
                 
                   <div className="p-4 border-t border-vietnam-red-100 bg-white/90 backdrop-blur-sm">
-                  <div className="flex gap-2">
+                  <form 
+                    onSubmit={(e) => {
+                      e.preventDefault()
+                      handleSendMessage()
+                    }}
+                    className="flex gap-2"
+                  >
                     <input 
                       type="text" 
+                      value={inputMessage}
+                      onChange={(e) => setInputMessage(e.target.value)}
+                      onKeyPress={handleKeyPress}
                       placeholder="Nhập câu hỏi của bạn..."
-                      className="flex-1 px-4 py-2 border border-vietnam-red-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-vietnam-red-500 focus:border-transparent"
+                      disabled={isLoading}
+                      className="flex-1 px-4 py-2 border border-vietnam-red-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-vietnam-red-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
                     />
                     <button 
-                      className="px-6 py-2 rounded-lg text-white font-medium transition-all duration-200 hover:shadow-lg"
+                      type="submit"
+                      disabled={!inputMessage.trim() || isLoading}
+                      className="px-6 py-2 rounded-lg text-white font-medium transition-all duration-200 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                       style={{
                         background: 'linear-gradient(135deg, #ef4444, #dc2626)'
                       }}
                       onMouseEnter={(e) => {
-                        e.target.style.transform = 'scale(1.05)'
+                        if (!e.target.disabled) {
+                          e.target.style.transform = 'scale(1.05)'
+                        }
                       }}
                       onMouseLeave={(e) => {
                         e.target.style.transform = 'scale(1)'
                       }}
                     >
-                      Gửi
+                      {isLoading ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin"/>
+                          Đang gửi...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4"/>
+                          Gửi
+                        </>
+                      )}
                     </button>
-                  </div>
+                  </form>
                 </div>
               </motion.div>
 
@@ -230,15 +344,30 @@ export default function ChatbotAI() {
                     Hãy đặt câu hỏi về bất kỳ khía cạnh nào của chiến dịch Điện Biên Phủ
                   </p>
                   <div className="space-y-2">
-                    <div className="bg-white/20 rounded-lg p-3 text-sm">
+                    <button 
+                      onClick={() => setInputMessage("Kế hoạch Nava là gì?")}
+                      className="w-full bg-white/20 rounded-lg p-3 text-sm text-left hover:bg-white/30 transition-colors duration-200"
+                    >
                       "Kế hoạch Nava là gì?"
-                    </div>
-                    <div className="bg-white/20 rounded-lg p-3 text-sm">
+                    </button>
+                    <button 
+                      onClick={() => setInputMessage("Tại sao Pháp chọn Điện Biên Phủ?")}
+                      className="w-full bg-white/20 rounded-lg p-3 text-sm text-left hover:bg-white/30 transition-colors duration-200"
+                    >
                       "Tại sao Pháp chọn Điện Biên Phủ?"
-                    </div>
-                    <div className="bg-white/20 rounded-lg p-3 text-sm">
+                    </button>
+                    <button 
+                      onClick={() => setInputMessage("Vai trò của hậu cần trong chiến dịch?")}
+                      className="w-full bg-white/20 rounded-lg p-3 text-sm text-left hover:bg-white/30 transition-colors duration-200"
+                    >
                       "Vai trò của hậu cần trong chiến dịch?"
-                    </div>
+                    </button>
+                    <button 
+                      onClick={() => setInputMessage("Chiến dịch Điện Biên Phủ được lãnh đạo bởi ai?")}
+                      className="w-full bg-white/20 rounded-lg p-3 text-sm text-left hover:bg-white/30 transition-colors duration-200"
+                    >
+                      "Chiến dịch Điện Biên Phủ được lãnh đạo bởi ai?"
+                    </button>
                   </div>
                 </div>
               </motion.div>
