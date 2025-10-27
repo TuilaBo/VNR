@@ -6,6 +6,7 @@ import ChatbotAI from './pages/ChatbotAI'
 import ChiTiet from './pages/ChiTiet'
 import LandingDienBienPhu from './pages/LandingDienBienPhu'
 import SanPhamMocKhoa from './pages/SanPhamMocKhoa'
+import CauHoiOnTap from './pages/CauHoiOnTap'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -22,6 +23,10 @@ function App() {
         setCurrentPage('chatbot')
         setCurrentId(null)
       } 
+      else if (hash === '#cau-hoi-on-tap') {
+        setCurrentPage('quiz')
+        setCurrentId(null)
+      }
       else if (hash === '#landing-dbp') {
         setCurrentPage('landing')
         setCurrentId(null)
@@ -44,6 +49,8 @@ function App() {
     switch (currentPage) {
       case 'chatbot':
         return <ChatbotAI />
+      case 'quiz':
+        return <CauHoiOnTap />
       case 'chitiet':
         return <ChiTiet id={currentId} />  
       case 'landing':

@@ -1,0 +1,607 @@
+[
+  {
+    "id": 1,
+    "question": "Vì sao Pháp quay lại xâm lược Việt Nam sau 1945 là lý do CỐT LÕI?",
+    "options": [
+      "A. Khai thác vàng ở Bắc Kạn",
+      "B. Khôi phục hệ thống thuộc địa và vị thế cường quốc",
+      "C. Trả đũa vì thua Nhật",
+      "D. Lập căn cứ chống Liên Xô"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 2,
+    "question": "Đông Dương quan trọng với Pháp vì:",
+    "options": [
+      "A. Chỉ là căn cứ quân sự",
+      "B. Nơi thử nghiệm vũ khí",
+      "C. Nguồn tài nguyên, thị trường và biểu tượng quyền lực",
+      "D. Cửa ngõ sang Trung Đông"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": 3,
+    "question": "Yếu tố quốc tế tạo thuận lợi cho Pháp 1945–1946:",
+    "options": [
+      "A. Liên Xô hỗ trợ Pháp",
+      "B. Quân Anh vào giải giới Nhật ở Nam Bộ",
+      "C. Trung Quốc hỗ trợ Pháp đổ bộ Hải Phòng",
+      "D. Liên Hợp Quốc cử quân đến Bắc Bộ"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 4,
+    "question": "Mỹ dần ủng hộ Pháp chủ yếu vì:",
+    "options": [
+      "A. Mong mở rộng thương mại gạo",
+      "B. Ngăn chặn cộng sản trong Chiến tranh Lạnh",
+      "C. Bảo vệ kiều dân Mỹ",
+      "D. Trao đổi công nghệ hạt nhân"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 5,
+    "question": "Pháp đánh giá sai điều gì về Việt Nam?",
+    "options": [
+      "A. Khả năng ngoại giao",
+      "B. Sức mạnh phong trào độc lập và khả năng trụ vững của chính quyền cách mạng",
+      "C. Trình độ công nghiệp nặng",
+      "D. Năng lực hải quân"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 6,
+    "question": "Kế hoạch Nava chọn Điện Biên Phủ vì:",
+    "options": [
+      "A. Gần hải cảng",
+      "B. Vùng đồng bằng thuận tiện cơ giới",
+      "C. “Pháo đài” khóa Tây Bắc, dựa không vận để cắt thông tuyến",
+      "D. Dễ thoát sang Lào bằng đường biển"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": 7,
+    "question": "Mục tiêu chiến lược cao nhất của ta ở Điện Biên Phủ:",
+    "options": [
+      "A. Bắt sống toàn bộ quân địch ngay tuần đầu",
+      "B. Đánh sập “pháo đài” để phá Kế hoạch Nava, tạo bước ngoặt kết thúc chiến tranh",
+      "C. Chiếm Mường Thanh trong 24 giờ",
+      "D. Mở đường ra biển"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 8,
+    "question": "Một mục tiêu chiến dịch chủ chốt:",
+    "options": [
+      "A. Tập kích hải quân Pháp",
+      "B. Khóa sân bay Mường Thanh, cắt cầu không vận",
+      "C. Mở cảng Đà Nẵng",
+      "D. Giải phóng Campuchia trước"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 9,
+    "question": "Trình tự tác chiến tổng quát:",
+    "options": [
+      "A. Trung tâm → ngoại vi → then chốt",
+      "B. Then chốt → ngoại vi → trung tâm",
+      "C. Ngoại vi → then chốt → trung tâm",
+      "D. Tấn công đồng thời mọi hướng"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": 10,
+    "question": "Ba phân khu phòng ngự của địch KHÔNG gồm:",
+    "options": [
+      "A. Him Lam – Bản Kéo – Độc Lập",
+      "B. Trung tâm Mường Thanh",
+      "C. Dải điểm cao Đông–Đông Nam (Eliane, Dominique, C1, A1)",
+      "D. Phân khu ven biển Hải Phòng"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": 11,
+    "question": "Điểm yếu căn bản của địch tại lòng chảo:",
+    "options": [
+      "A. Thiếu vũ khí hạng nặng",
+      "B. Phụ thuộc tuyệt đối vào đường băng và bị khống chế từ điểm cao",
+      "C. Không có sĩ quan chỉ huy",
+      "D. Không có công sự"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 12,
+    "question": "Ưu thế của ta tại địa hình Điện Biên:",
+    "options": [
+      "A. Hải quân mạnh",
+      "B. Khả năng triển khai pháo – cao xạ trên điểm cao và công sự hóa tiến công",
+      "C. Nhiều sân bay dã chiến",
+      "D. Kho xăng dầu lớn tại chỗ"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 13,
+    "question": "Vai trò trọng tâm của bộ binh trong hiệp đồng:",
+    "options": [
+      "A. Bảo đảm vận tải",
+      "B. Đột kích chiếm mục tiêu và giữ chốt ngay trong đêm",
+      "C. Phòng không",
+      "D. Trinh sát đường không"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 14,
+    "question": "Pháo binh đảm nhiệm:",
+    "options": [
+      "A. Đánh biển",
+      "B. Chế áp hỏa điểm và khống chế đường băng Mường Thanh",
+      "C. Hậu cần",
+      "D. Công tác đảng"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 15,
+    "question": "Cao xạ có nhiệm vụ chính:",
+    "options": [
+      "A. Phá cầu",
+      "B. Đánh máy bay, bẻ gãy cầu không vận",
+      "C. Đào hào",
+      "D. Cứu thương"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 16,
+    "question": "Công binh là lực lượng:",
+    "options": [
+      "A. Mở đường, cắt rào, đặt bộc phá vào “nút thép” công sự",
+      "B. Điều tra dân số",
+      "C. Thương lượng ngoại giao",
+      "D. Sửa chữa tàu thủy"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 17,
+    "question": "“Búa – đe – khóa – mở” tương ứng đúng là:",
+    "options": [
+      "A. Bộ binh – pháo – cao xạ – công binh",
+      "B. Pháo “đập” – bộ “đè” – cao xạ “khóa” – công binh “mở”",
+      "C. Cao xạ “mở” – công binh “khóa” – pháo “đè” – bộ “đập”",
+      "D. Công binh “đập” – cao xạ “đè” – bộ “khóa” – pháo “mở”"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 18,
+    "question": "“Hệ pháo vòng cung” nghĩa là:",
+    "options": [
+      "A. Dồn pháo một điểm",
+      "B. Phân tán pháo 105mm trên sườn núi bao quanh lòng chảo, “bắn lộ – đổi trận địa”",
+      "C. Chỉ bắn ban ngày",
+      "D. Bắn từ đồng bằng"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 19,
+    "question": "“Đường hào tiếp tế” cho phép:",
+    "options": [
+      "A. Không cần hậu cần nữa",
+      "B. Tiếp cận cửa mở, tải thương an toàn trong hỏa lực địch",
+      "C. Tránh mọi công sự",
+      "D. Hạ cánh máy bay"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 20,
+    "question": "Nguyên tắc thời gian hoạt động hậu cần:",
+    "options": [
+      "A. Ngày đổ hàng, đêm nghỉ",
+      "B. Đêm “giờ vàng” đổ cơ số; ban ngày củng cố – ngụy trang",
+      "C. Luôn đi lộ thiên",
+      "D. Chỉ dùng ô tô"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 21,
+    "question": "Cách bố trí kho – trạm – tuyến nhằm:",
+    "options": [
+      "A. Tập trung duy nhất một kho lớn",
+      "B. Chia tuyến nối tiếp, kho dã chiến ngụy trang để không “đứt mạch”",
+      "C. Không cần ngụy trang",
+      "D. Chỉ hoạt động ban ngày"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 22,
+    "question": "Quy tắc quân y – cứu thương:",
+    "options": [
+      "A. Chờ hết trận mới cứu",
+      "B. “Sơ cứu tại chỗ – chuyển trong hào – mổ gần – trung chuyển về sau”",
+      "C. Chuyển thương lộ thiên cho nhanh",
+      "D. Dồn thương binh về một điểm lộ"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 23,
+    "question": "Điều tiết vật chất theo nhịp chiến đấu KHÔNG gồm:",
+    "options": [
+      "A. Trước trận ưu tiên đạn – bộc phá – nước",
+      "B. Trong trận tiếp tế “dây chuyền tay”",
+      "C. Sau trận bổ sung vật tư củng cố chốt",
+      "D. Cắt hoàn toàn tiếp tế để giữ bí mật"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": 24,
+    "question": "Kỷ luật bí mật – an toàn nhấn mạnh:",
+    "options": [
+      "A. Dùng đèn pha ban đêm",
+      "B. Không lộ dấu, khói thấp, nghi binh kho giả – pháo giả",
+      "C. Tập kết hàng thành đống lớn",
+      "D. Bắn thử pháo vào kho"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 25,
+    "question": "Mốc 20/11/1953 (Castor) là:",
+    "options": [
+      "A. Ta mở chiến dịch",
+      "B. Pháp nhảy dù chiếm đóng Điện Biên Phủ, xây “pháo đài lòng chảo”",
+      "C. Ký Geneva",
+      "D. Ta tổng công kích"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 26,
+    "question": "06/12/1953 đánh dấu:",
+    "options": [
+      "A. Mỹ đổ bộ",
+      "B. Bộ Chính trị quyết nghị mở Chiến dịch Điện Biên Phủ",
+      "C. Hòa đàm Paris",
+      "D. Pháp rút quân"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 27,
+    "question": "12/01/1954 tại Thẩm Pụa xác định phương châm:",
+    "options": [
+      "A. Đánh nhanh, tiến nhanh",
+      "B. Phòng ngự chiến lược",
+      "C. Rút lui bảo toàn",
+      "D. Hòa hoãn"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 28,
+    "question": "Quyết định bản lề 26/01/1954:",
+    "options": [
+      "A. Tổng công kích ngay",
+      "B. Chuyển sang “đánh chắc, tiến chắc”",
+      "C. Hủy chiến dịch",
+      "D. Tấn công đường biển"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 29,
+    "question": "Đợt 1 (13–15/3) mục tiêu chính:",
+    "options": [
+      "A. Đánh trung tâm trước",
+      "B. Diệt ngoại vi Him Lam – Bản Kéo – uy hiếp Độc Lập",
+      "C. Chiếm A1 ngay",
+      "D. Hạ Mường Thanh trong ngày"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 30,
+    "question": "Đợt 2 (16–25/3) trọng tâm:",
+    "options": [
+      "A. Mở mặt biển",
+      "B. Bóc vỏ ngoại vi, đào hào áp sát, chuẩn bị đánh cụm then chốt phía Đông",
+      "C. Không tác chiến",
+      "D. Chỉ đánh ban ngày"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 31,
+    "question": "Khóa dần sân bay Mường Thanh nhằm:",
+    "options": [
+      "A. Thu máy bay",
+      "B. Bóp nghẹt mạch tiếp tế không vận của địch",
+      "C. Lập sân bay cho ta",
+      "D. Đón thương thuyền"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 32,
+    "question": "Đợt 3 (30/3–cuối 4) tập trung:",
+    "options": [
+      "A. Đồng bằng sông Hồng",
+      "B. Dải điểm cao phía Đông (Eliane – Dominique – C1 – A1)",
+      "C. Biên giới Việt–Trung",
+      "D. Hải đảo"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 33,
+    "question": "Trận kéo dài giằng co khoảng 20 ngày:",
+    "options": [
+      "A. Him Lam",
+      "B. C1",
+      "C. A1 nổ bộc phá",
+      "D. Mường Thanh"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 34,
+    "question": "Hình thức đột phá then chốt A1:",
+    "options": [
+      "A. Không kích",
+      "B. Xe tăng đột phá",
+      "C. Đào hầm ngầm, đặt bộc phá lớn dưới lô cốt",
+      "D. Thủy chiến"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": 35,
+    "question": "06/05/1954 (đêm ~20:30) sự kiện:",
+    "options": [
+      "A. Nổ bộc phá lớn ở A1, rạng sáng 7/5 làm chủ A1",
+      "B. Bắt De Castries",
+      "C. Ký Geneva",
+      "D. Địch rút ra biển"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 36,
+    "question": "07/05/1954 (17:30) đánh dấu:",
+    "options": [
+      "A. Rút quân ta",
+      "B. Ta chiếm sở chỉ huy Mường Thanh, bắt sống Tướng De Castries",
+      "C. Địch phản công thành công",
+      "D. Đàm phán kết thúc"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 37,
+    "question": "21/07/1954 kết quả:",
+    "options": [
+      "A. Hiệp định Geneva ký kết, chấm dứt chiến tranh Đông Dương",
+      "B. NATO can thiệp",
+      "C. Pháp thắng lợi",
+      "D. Không có thỏa thuận"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 38,
+    "question": "Kết quả định lượng quan trọng:",
+    "options": [
+      "A. 1.620 địch bị loại",
+      "B. Khoảng 16.200 địch bị tiêu diệt/bắt làm tù binh",
+      "C. 162.000 địch rút sang Lào",
+      "D. 620 địch bị bắt"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 39,
+    "question": "Ý nghĩa chiến lược của chiến thắng:",
+    "options": [
+      "A. Kế hoạch Nava củng cố",
+      "B. Ưu thế chiến lược chuyển hẳn về phía ta",
+      "C. Địch tăng không vận",
+      "D. Ta suy yếu hậu cần"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 40,
+    "question": "“Dĩ nhu chế cương” thể hiện ở:",
+    "options": [
+      "A. Tăng hỏa lực lộ thiên",
+      "B. Công sự hóa tiến công, lấy thời gian làm đòn bẩy",
+      "C. Đánh ngày, bỏ ngụy trang",
+      "D. Bỏ hiệp đồng"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 41,
+    "question": "“Vây lấn – bóc vỏ – bức hàng” diễn giải đúng:",
+    "options": [
+      "A. Đánh trung tâm trước",
+      "B. Lấn áp sát, đánh rụng ngoại vi, làm địch suy kiệt buộc hạ vũ khí",
+      "C. Tác chiến đường biển",
+      "D. Không đào hào"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 42,
+    "question": "Lỗi đánh giá ban đầu của ta:",
+    "options": [
+      "A. Coi địch quá mạnh nên không đánh",
+      "B. Thiên hướng “đánh nhanh, thắng nhanh” khi địch đã củng cố công sự dày",
+      "C. Không dùng pháo binh",
+      "D. Không có trinh sát"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 43,
+    "question": "Cách khắc phục sai lầm:",
+    "options": [
+      "A. Tiếp tục đánh nhanh",
+      "B. Quyết định “kéo pháo ra”, chuyển “đánh chắc, tiến chắc”, công sự hóa toàn diện",
+      "C. Tạm dừng vô thời hạn",
+      "D. Rút hẳn khỏi Tây Bắc"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 44,
+    "question": "Vai trò của thông tin – trinh sát:",
+    "options": [
+      "A. Không cần thiết",
+      "B. “Dây thần kinh” bảo đảm liên lạc, hiệu chỉnh phần tử bắn, cập nhật mục tiêu",
+      "C. Chỉ dùng khi trời mưa",
+      "D. Chỉ lo khẩu phần ăn"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 45,
+    "question": "Mục tiêu của “hậu cần trong công sự”:",
+    "options": [
+      "A. Tiết kiệm tối đa, hạn chế cấp phát",
+      "B. Đảm bảo “đủ đạn mở cửa – đủ vật tư giữ chốt – đủ lương luân phiên” suốt 56 ngày đêm",
+      "C. Chỉ cấp đạn pháo",
+      "D. Dồn hàng một lần"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 46,
+    "question": "Ý nghĩa ngoại giao của chiến thắng:",
+    "options": [
+      "A. Không tác động đàm phán",
+      "B. Tạo ưu thế trên bàn đàm phán Geneva từ thế mạnh",
+      "C. Làm đàm phán bế tắc",
+      "D. Mở mặt trận mới"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 47,
+    "question": "Bài học hiện đại về chỉ huy:",
+    "options": [
+      "A. Không thay đổi phương châm",
+      "B. Bản lĩnh điều chỉnh chiến lược đúng thời điểm để “đánh chắc thắng chắc”",
+      "C. Tránh hiệp đồng binh chủng",
+      "D. Dựa hoàn toàn vào may mắn"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 48,
+    "question": "Trọng tâm “khóa mạch sống đối phương” ở ĐBP là:",
+    "options": [
+      "A. Cắt đường tiếp tế đường biển",
+      "B. Khóa đường băng/cầu không vận Mường Thanh",
+      "C. Đánh cảng Sài Gòn",
+      "D. Chặn biên giới Trung Quốc"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 49,
+    "question": "Khi chiếm chốt, bộ binh cần làm gì NGAY:",
+    "options": [
+      "A. Truy kích xa ngay",
+      "B. Tổ chức giữ chốt trong đêm để chặn phản kích",
+      "C. Rời chốt tránh pháo",
+      "D. Bỏ lại công sự địch"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 50,
+    "question": "Tác dụng của “bắn lộ – đổi trận địa”:",
+    "options": [
+      "A. Tiết kiệm đạn",
+      "B. Né phản pháo, duy trì hỏa lực liên tục",
+      "C. Giảm công sự cần thiết",
+      "D. Tăng ánh sáng ban đêm"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 51,
+    "question": "“Công sự – ngụy trang cho hậu cần” nhấn mạnh:",
+    "options": [
+      "A. Bếp dã chiến, kho đạn, trạm phẫu đều có hầm mái che, tuyến thoát hiểm, ngụy trang",
+      "B. Bếp lộ thiên để nhanh",
+      "C. Kho đặt trên đỉnh trống",
+      "D. Không cần tuyến thoát hiểm"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 52,
+    "question": "Sau A1, trung tâm Mường Thanh ở trạng thái:",
+    "options": [
+      "A. “Mù – liệt – thiếu”, rệu rã",
+      "B. Mạnh lên",
+      "C. Được tiếp tế dồi dào",
+      "D. Bất biến"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 53,
+    "question": "Thứ tự hợp lý để biến thắng lợi cục bộ thành ưu thế tổng thể:",
+    "options": [
+      "A. Giữ chốt → nối hào → áp sát mục tiêu kế tiếp",
+      "B. Đánh xong bỏ chốt",
+      "C. Tạm dừng dài ngày",
+      "D. Đi lộ thiên cho nhanh"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 54,
+    "question": "Ý nghĩa của việc bắt sống De Castries:",
+    "options": [
+      "A. Không quan trọng",
+      "B. Hạ “bộ não” chỉ huy, biểu tượng sụp đổ, tập đoàn cứ điểm tan rã",
+      "C. Tạo cớ kéo dài chiến tranh",
+      "D. Chỉ có giá trị tuyên truyền"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 55,
+    "question": "“Quân sự đi trước, ngoại giao chốt hạ” hiểu đúng là:",
+    "options": [
+      "A. Chỉ cần ngoại giao",
+      "B. Mọi kết quả chính trị–pháp lý bền vững cần sức nặng từ thắng lợi quân sự quyết định",
+      "C. Không cần tác chiến",
+      "D. Đánh mãi không đàm phán"
+    ],
+    "answer": "B"
+  }
+]
