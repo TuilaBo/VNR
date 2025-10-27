@@ -19,8 +19,7 @@ export default function ChatbotAI() {
   // Sample sections for navbar
   const sections = [
     { id: 'i-boi-canh', title: 'I. Tổng Quan Chiến Dịch và Bối Cảnh', icon: BookOpen },
-    { id: 'chatbot-ai', title: 'ChatbotAI', icon: Bot },
-    { id: 'cau-hoi-on-tap', title: 'Câu Hỏi Ôn Tập', icon: MessageCircle }
+    { id: 'chatbot-ai', title: 'ChatbotAI', icon: Bot }
   ]
 
   // Initialize chat with greeting
