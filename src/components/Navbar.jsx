@@ -31,6 +31,15 @@ export default function Navbar({ sections }) {
         <ul className="hidden lg:flex items-center gap-8">
         <li>
             <a 
+              href="#vonguyengiap"
+              className="text-white hover:text-vietnam-gold-300 font-medium transition-colors duration-200 relative group"
+            >
+              Đại tướng Võ Nguyên Giáp
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-vietnam-gold-300 group-hover:w-full transition-all duration-300"></span>
+            </a>
+          </li>
+        <li>
+            <a 
               href="#landing-dbp"
               className="text-white hover:text-vietnam-gold-300 font-medium transition-colors duration-200 relative group"
             >
@@ -50,8 +59,7 @@ export default function Navbar({ sections }) {
           </li>
           <li>
           <a href="#sanpham-mockhoa" className="text-white hover:text-vietnam-gold-300 font-medium transition-colors duration-200 relative group">
-            Móc khóa Điện Biên Phủ
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-vietnam-gold-300 group-hover:w-full transition-all duration-300"></span>
+            Móc khóa ĐBP            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-vietnam-gold-300 group-hover:w-full transition-all duration-300"></span>
           </a>
         </li>
 

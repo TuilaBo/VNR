@@ -23,6 +23,7 @@ import dbp12 from '../assets/12.jpg'
 import dbp13 from '../assets/13.jpg'
 import dbp14 from '../assets/14.jpg'
 import dbp15 from '../assets/15.jpg'
+import bando from "../assets/bando.jpg"
 
 const TIMELINE = [
     {
@@ -231,10 +232,25 @@ export default function LandingDienBienPhu() {
                   <p className="text-[#4a3428] text-base leading-relaxed">{item.desc}</p>
                 </motion.div>
               </div>
+
             </motion.div>
           )
         })}
       </main>
+      {/* 🗺️ Bản đồ chiến dịch */}
+<section className="relative z-10 max-w-5xl mx-auto px-6 pb-24 text-center">
+  <h2 className="text-3xl md:text-4xl font-extrabold text-[#b91c1c] mb-8">
+    Thời gian chiến dịch toàn thắng
+  </h2>
+  <div className="rounded-2xl overflow-hidden shadow-2xl border border-[#f3d6d6] bg-white/90 backdrop-blur-sm">
+    <img 
+      src={bando} 
+      alt="Bản đồ chiến dịch Điện Biên Phủ" 
+      className="w-full h-auto object-contain"
+    />
+  </div>
+</section>
+
 
       <Footer />
     </div>

@@ -7,6 +7,7 @@ import ChiTiet from './pages/ChiTiet'
 import LandingDienBienPhu from './pages/LandingDienBienPhu'
 import SanPhamMocKhoa from './pages/SanPhamMocKhoa'
 import CauHoiOnTap from './pages/CauHoiOnTap'
+import VoNguyenGiap from './pages/VoNguyenGiap'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -34,6 +35,9 @@ function App() {
       else if (hash === '#sanpham-mockhoa') {
         setCurrentPage('mockhoa')
         setCurrentId(null)
+      } else if (hash === '#vonguyengiap') {
+        setCurrentPage('vonguyengiap')
+        setCurrentId(null)
       } else {
         setCurrentPage('home')
         setCurrentId(null)
@@ -57,7 +61,8 @@ function App() {
         return <LandingDienBienPhu />
       case 'mockhoa':
         return <SanPhamMocKhoa />
-
+      case 'vonguyengiap':
+        return <VoNguyenGiap />
       case 'home':
       default:
         return <Home />
