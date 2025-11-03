@@ -262,58 +262,6 @@ export default function SanPhamMocKhoa() {
 </main>
 
 
-{/* 🌟 Liên hệ Fanpage */}
-<section className="relative z-20 py-20 text-center overflow-hidden">
-  {/* 🔥 Background cổ điển có hiệu ứng ánh sáng */}
-  <div
-    className="absolute inset-0 bg-cover bg-center brightness-[0.75]"
-    style={{
-      backgroundImage:
-        "url('https://upload.wikimedia.org/wikipedia/commons/4/49/Dien_Bien_Phu_hills_1954.jpg')",
-      backgroundAttachment: 'fixed'
-    }}
-  />
-  <div className="absolute inset-0 bg-gradient-to-r from-[#b91c1c]/90 via-[#d63f25]/85 to-[#b91c1c]/90 mix-blend-multiply" />
-
-  {/* 🌈 Dải ánh sáng chuyển động */}
-  <div className="absolute inset-0 overflow-hidden">
-    <div className="animate-[shine_4s_linear_infinite] w-1/3 h-full bg-gradient-to-r from-transparent via-[#fff8d6]/40 to-transparent skew-x-12 absolute left-0 top-0"></div>
-  </div>
-
-  <style>{`
-    @keyframes shine {
-      0% { transform: translateX(-100%) skewX(-12deg); }
-      100% { transform: translateX(200%) skewX(-12deg); }
-    }
-  `}</style>
-
-  {/* 🖋️ Nội dung */}
-  <motion.div
-    initial={{ opacity: 0, scale: 0.95 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.8 }}
-    className="relative max-w-3xl mx-auto bg-white/15 backdrop-blur-md rounded-3xl border border-[#f6e6c2]/60 shadow-[0_0_25px_rgba(255,220,150,0.3)] p-10"
-  >
-    <h2 className="text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg mb-6">
-      Liên hệ mua hàng tại Fanpage chính thức
-    </h2>
-    <p className="text-lg text-[#fff8dc] mb-8 max-w-2xl mx-auto leading-relaxed">
-      Hãy ghé thăm trang Fanpage để xem thêm các mẫu móc khóa, bộ sưu tập kỷ niệm
-      và sản phẩm lưu niệm lịch sử khác. Chúng tôi rất hân hạnh được phục vụ bạn!
-    </p>
-    <motion.a
-      href="https://www.facebook.com/tea.nee.600171" 
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.08 }}
-      whileTap={{ scale: 0.96 }}
-      className="inline-flex items-center gap-3 bg-[#1877f2] text-white text-lg font-semibold px-8 py-4 rounded-full shadow-xl hover:shadow-[#1877f2]/60 transition-all duration-300"
-    >
-      <Facebook className="w-6 h-6" />
-      Truy cập Fanpage
-    </motion.a>
-  </motion.div>
-</section>
 
       <Footer />
     </div>
